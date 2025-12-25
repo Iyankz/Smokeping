@@ -31,5 +31,19 @@ Skrip ini menggunakan package manager `apt`. Pastikan Anda menggunakan salah sat
 
 2. **Eksekusi Skrip:**
    ```bash
-   chmod +x install_smokeping.sh
-   sudo ./install_smokeping.sh
+   sudo curl https://raw.githubusercontent.com/Iyankz/Smokeping/refs/heads/main/smokeping.sh | sudo bash
+   ```
+
+
+## 📂 Pasca Instalasi
+Konfigurasi Target: 
+```bash
+/etc/smokeping/config.d/Targets
+
+Restart Service: sudo systemctl restart smokeping
+```
+## 👥 Credits
+Proyek ini dikembangkan oleh:
+
+* **Iyankz** (Lead Developer/Owner)
+* **Gemini** (Google AI) (Assistant Developer)
