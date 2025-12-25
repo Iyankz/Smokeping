@@ -54,12 +54,12 @@ Konfigurasi Alert:
 /etc/smokeping/config.d/Alerts
 ```
 
----
+----
+
 ## Dibuat dengan ❤️ oleh [Iyankz](https://github.com/Iyankz) & [Gemini AI](https://gemini.google.com/)
 
-* **Iyankz** (Lead Developer)
-
-* **Gemini** (Assistant Developer)
+* **Iyankz** (Inisiator & Developer)
+* **Gemini** (AI Partner & Technical Assistant)
 
 ## ⚖️ Lisensi
 Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detailnya.
