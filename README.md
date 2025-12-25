@@ -1,49 +1,62 @@
 # Auto Install SmokePing (Native)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![OS: Ubuntu / Debian / Mint](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Debian%20%7C%20Mint-orange.svg)](https://www.debian.org/)
-[![Platform: Debian-based](https://img.shields.io/badge/Platform-Debian--based-blue.svg)](https://www.debian.org/distrib/packages)
+[![OS: Ubuntu / Debian / Mint](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Debian%20%7C%20Mint-orange.svg)](https://ubuntu.com/)
+[![Platform: Debian-based](https://img.shields.io/badge/Platform-Debian--based-blue.svg)](https://www.debian.org/)
 
-Skrip bash ini dirancang untuk melakukan instalasi **SmokePing** secara otomatis pada sistem operasi berbasis Debian/APT. Skrip ini menangani konfigurasi timezone, instalasi paket, hingga perbaikan izin akses direktori agar sistem monitoring langsung siap digunakan.
+Skrip bash otomatis untuk instalasi dan konfigurasi **SmokePing** secara native pada sistem operasi berbasis Debian/Ubuntu. Skrip ini menangani pengaturan timezone, instalasi dependensi, hingga konfigurasi target awal.
+
+---
 
 ## 🚀 Fitur Utama
-* **Otomatisasi Timezone:** Mengatur sistem ke `Asia/Jakarta` untuk akurasi grafik.
-* **Integrasi Web Server:** Otomatis mengonfigurasi Apache2 dengan modul `cgi` dan `fcgid`.
-* **Fix Permission:** Menjamin direktori cache dapat ditulisi oleh user `www-data`.
-* **Dynamic Pathing:** Menyesuaikan lokasi file binari `fping` secara otomatis.
+* **Auto-Timezone:** Otomatis mengatur sistem ke `Asia/Jakarta`.
+* **Web Server Ready:** Otomatis mengaktifkan modul CGI/FastCGI pada Apache2.
+* **Fix Permissions:** Mengatur hak akses direktori agar grafik langsung muncul tanpa error.
+* **Default Targets:** Menyertakan contoh target monitor (Google DNS & IIX).
+* **Telegram Support:** Kompatibel dengan skrip notifikasi eksternal.
 
-## 🖥️ OS yang Didukung (Debian-Based)
-Skrip ini menggunakan package manager `apt`. Pastikan Anda menggunakan salah satu dari OS berikut:
+## 🖥️ Kompatibilitas OS
+Skrip ini dirancang khusus untuk distribusi Linux berbasis `apt`:
 
-| Nama OS | Versi Teruji | Status |
+| Distribusi | Versi Teruji | Status |
 | :--- | :--- | :--- |
-| **Ubuntu** | 20.04, 22.04, 24.04 (LTS) | ✅ Fully Supported |
+| **Ubuntu** | 20.04, 22.04, 24.04 | ✅ Fully Supported |
 | **Debian** | 10, 11, 12 | ✅ Fully Supported |
 | **Linux Mint** | 20, 21, 22 | ✅ Fully Supported |
 | **Kali Linux** | Rolling Edition | ✅ Fully Supported |
 
-> **Catatan:** Skrip ini **tidak mendukung** distro berbasis RHEL (CentOS/AlmaLinux) atau Arch Linux.
+---
 
-## 🛠️ Cara Penggunaan
+## 🛠️ Cara Instalasi (One-Liner)
 
-1. **Persiapan:**
-   Pastikan Anda memiliki akses root atau sudo.
+Buka terminal Anda dan jalankan perintah di bawah ini:
 
-2. **Eksekusi Skrip:**
-   ```bash
-   sudo curl https://raw.githubusercontent.com/Iyankz/Smokeping/refs/heads/main/smokeping.sh | sudo bash
-   ```
+```bash
+sudo curl -sSL https://raw.githubusercontent.com/Iyankz/Smokeping/main/smokeping.sh | sudo bash
+```
 
+## 🤖 Notifikasi Telegram (Opsional)
+Jika Anda ingin mendapatkan notifikasi ke Telegram saat host down:
 
-## 📂 Pasca Instalasi
+* Siapkan TOKEN dan CHAT_ID Telegram
+* Jalankan perintah dibawah :
+```bash
+sudo curl -sSL https://raw.githubusercontent.com/Iyankz/Smokeping/refs/heads/main/Telegram-Smokeping.sh | sudo bash
+```
+
+## 📂 Lokasi File Penting
 Konfigurasi Target: 
 ```bash
 /etc/smokeping/config.d/Targets
-
-Restart Service: sudo systemctl restart smokeping
 ```
-## 👥 Credits
+Konfigurasi Alert: 
+```bash
+/etc/smokeping/config.d/Alerts
+```
+
+##👥 Credits
 Proyek ini dikembangkan oleh:
 
-* **Iyankz** (Lead Developer/Owner)
-* **Gemini** (Google AI) (Assistant Developer)
+* **Iyankz** (Lead Developer)
+
+* **Gemini** (Assistant Developer)
