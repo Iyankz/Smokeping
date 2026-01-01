@@ -58,7 +58,7 @@ Konfigurasi Alert:
 
 ## Dibuat dengan ❤️ oleh [Iyankz](https://github.com/Iyankz) & [Gemini AI](https://gemini.google.com/)
 
-* **Iyankz** (Inisiator &=, Developer & Tester)
+* **Iyankz** (Inisiator & Developer & Tester)
 * **Gemini** (AI Partner & Technical Assistant)
 
 ## ⚖️ Lisensi
